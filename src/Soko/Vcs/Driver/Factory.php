@@ -30,8 +30,11 @@
  * @copyright 2012 Jean-Marc Fontaine <jm@jmfontaine.net>
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
  */
-namespace Soko\Vcs;
+namespace Soko\Vcs\Driver;
 
+/**
+ * VCS driver factory
+ */
 class Factory
 {
     public static function getDriver($name, $projectPath)
