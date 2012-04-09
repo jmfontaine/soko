@@ -1,0 +1,4 @@
+actions:
+  php_lint:
+    include: "*.php"
+    exclude: "tests/_files/buggy.php"

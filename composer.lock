@@ -1,0 +1,22 @@
+{
+    "hash": "1228192729f4eb5da1561e095b2e1c1d",
+    "packages": [
+        {
+            "package": "symfony/console",
+            "version": "v2.0.12"
+        },
+        {
+            "package": "symfony/finder",
+            "version": "v2.0.12"
+        },
+        {
+            "package": "symfony/process",
+            "version": "v2.0.12"
+        },
+        {
+            "package": "symfony/yaml",
+            "version": "v2.0.12"
+        }
+    ],
+    "aliases": []
+}
