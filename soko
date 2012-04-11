@@ -34,7 +34,6 @@
 use Soko\Console\Application;
 
 $loader = require 'vendor/.composer/autoload.php';
-$loader->add('Soko', __DIR__ . '/src');
 
 $application = new Application();
 $application->run();
