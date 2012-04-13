@@ -34,7 +34,10 @@ namespace Soko\Console;
 
 use Soko\Console\Command\Build as BuildCommand;
 use Symfony\Component\Console\Application as BaseApplication;
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
@@ -48,6 +51,21 @@ class Application extends BaseApplication
     public function __construct()
     {
     	parent::__construct('Soko by Jean-Marc Fontaine', '0.1-dev');
+
+
+        $definition = array(
+            new InputArgument('command', InputArgument::REQUIRED, 'The command to execute'),
+
+            new InputOption('--help',    '-h', InputOption::VALUE_NONE, 'Display this help message.'),
+            new InputOption('--quiet',   '-q', InputOption::VALUE_NONE, 'Do not output any message.'),
+            new InputOption('--verbose', '-v', InputOption::VALUE_NONE, 'Increase verbosity of messages.'),
+            new InputOption('--version', '-V', InputOption::VALUE_NONE, 'Display this application version.'),
+            new InputOption('--ansi',    '',   InputOption::VALUE_NONE, 'Force ANSI output.'),
+            new InputOption('--no-ansi', '',   InputOption::VALUE_NONE, 'Disable ANSI output.'),
+        );
+
+        $this->getDefinition()
+             ->setDefinition($definition);
     }
 
     /**
