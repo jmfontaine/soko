@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?php
 /**
  * Copyright (c) 2012, Jean-Marc Fontaine
@@ -31,10 +30,23 @@
  * @copyright 2012 Jean-Marc Fontaine <jm@jmfontaine.net>
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
  */
-use Soko\Console\Application;
-use Soko\Console\Output\ConsoleOutput;
+namespace Soko\Console\Output;
 
-$loader = require 'vendor/.composer/autoload.php';
+use Symfony\Component\Console\Output\ConsoleOutput as BaseOutput;
 
-$application = new Application();
-$application->run(null, new ConsoleOutput());
+class ConsoleOutput extends BaseOutput
+{
+    public function writelnVerbose($messages, $type = 0)
+    {
+        if (self::VERBOSITY_VERBOSE === $this->getVerbosity()) {
+            $this->writeVerbose($messages, true, $type);
+        }
+    }
+
+    public function writeVerbose($messages, $newline = false, $type = 0)
+    {
+        if (self::VERBOSITY_VERBOSE === $this->getVerbosity()) {
+            $this->write($messages, $newline, $type);
+        }
+    }
+}
