@@ -1,12 +1,14 @@
 {
-    "name": "Soko",
+    "name": "jmfontaine/soko",
     "description": "Light continuous integration tool",
     "license": "BSD-3-Clause",
+    "homepage": "http://github.com/jmfontaine/soko",
     "authors": [
         {
             "name": "Jean-Marc Fontaine",
             "email": "jm@jmfontaine.net",
-            "homepage": "http://jmfontaine.net/"
+            "homepage": "http://jmfontaine.net/",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -18,5 +20,9 @@
     },
     "autoload": {
         "psr-0": { "Soko": "src/" }
-    }
+    },
+    "support": {
+        "issues": "https://github.com/jmfontaine/soko/issues"
+    },
+    "minimum-stability": "dev"
 }
