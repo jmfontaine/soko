@@ -4,8 +4,8 @@
         {
             "package": "symfony/console",
             "version": "2.0.x-dev",
-            "source-reference": "v2.0.16",
-            "commit-date": "1341926882"
+            "source-reference": "3d0d961fa4e721ca282f2aba05f6eb2b9d20ad14",
+            "commit-date": "1342761932"
         },
         {
             "package": "symfony/finder",
