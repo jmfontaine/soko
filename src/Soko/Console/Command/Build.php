@@ -32,8 +32,9 @@
  */
 namespace Soko\Console\Command;
 
+use Aviso\Notifier\GrowlNotifier;
+use Aviso\Event\Event;
 use Soko\Builder;
-use Soko\Renderer\Stream as StreamRenderer;
 use Soko\Vcs\Commit;
 use Soko\Vcs\Driver\Git as GitDriver;
 use Symfony\Component\Console\Command\Command;
@@ -100,8 +101,12 @@ class Build extends Command
         $builder = new Builder($config);
         $report = $builder->buildCommit($commit);
 
-        $renderer = new StreamRenderer();
-        $renderer->render($report);
+        $event = new Event();
+        $title = $report->isSuccessfull() ? 'Build succeed' : 'Build failed';
+        $event->setTitle($title);
+
+        $notifier = new GrowlNotifier();
+        $notifier->handleEvent($event);
     }
 
     protected function getDefaultConfigPath()

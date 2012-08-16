@@ -16,7 +16,8 @@
         "symfony/console": "2.0.*",
         "symfony/finder": "2.0.*",
         "symfony/process": "2.0.*",
-        "symfony/yaml": "2.0.*"
+        "symfony/yaml": "2.0.*",
+        "jmfontaine/aviso": "dev-master"
     },
     "autoload": {
         "psr-0": { "Soko": "src/" }

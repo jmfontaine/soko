@@ -1,6 +1,12 @@
 {
-    "hash": "ac6c6c17812b20f0493be271f07ba310",
+    "hash": "80af34ec479331046e3040fbcbcfef05",
     "packages": [
+        {
+            "package": "jmfontaine/aviso",
+            "version": "dev-master",
+            "source-reference": "ac80fef10eeb8759445f7b103db79d5a092e8bcd",
+            "commit-date": "1345098614"
+        },
         {
             "package": "symfony/console",
             "version": "2.0.x-dev",
@@ -31,7 +37,7 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ]
+    "stability-flags": {
+        "jmfontaine/aviso": 20
+    }
 }
