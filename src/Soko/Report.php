@@ -34,9 +34,14 @@ namespace Soko;
 
 use Soko\Action\ActionInterface;
 
+/**
+ * Report of the actions
+ */
 class Report
 {
     private $data = array();
+
+    private $exitCode = true;
 
     public function addActionData(ActionInterface $action, $isSuccess, $output)
     {
@@ -50,5 +55,32 @@ class Report
     public function getData()
     {
         return $this->data;
+    }
+
+    public function getOutput()
+    {
+        $output = '';
+        foreach ($this->data as $action) {
+            $output .= $action['output'];
+        }
+
+        return $output;
+    }
+
+    public function isSuccessfull()
+    {
+        return 0 === $this->getExitCode();
+    }
+
+    public function setExitCode($exitCode)
+    {
+        $this->exitCode = $exitCode;
+
+        return $this;
+    }
+
+    public function getExitCode()
+    {
+        return $this->exitCode;
     }
 }
