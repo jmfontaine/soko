@@ -25,5 +25,6 @@
     "support": {
         "issues": "https://github.com/jmfontaine/soko/issues"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "bin": ["bin/soko"]
 }

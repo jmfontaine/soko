@@ -34,7 +34,7 @@
 use Soko\Console\Application;
 use Soko\Console\Output\ConsoleOutput;
 
-$loader = require 'vendor/autoload.php';
+$loader = require __DIR__ . '/../vendor/autoload.php';
 
 $application = new Application();
 $application->run(null, new ConsoleOutput());
