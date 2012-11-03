@@ -7,7 +7,7 @@
  */
 namespace Soko\Vcs\Driver;
 
-class Git extends AbstractDriver
+class GitDriver extends AbstractDriver
 {
     public function exportFullContentToDir($dir, $commitHash)
     {
