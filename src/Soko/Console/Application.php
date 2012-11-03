@@ -20,12 +20,12 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Soko application.
+ * Soko console application
  */
 class Application extends BaseApplication
 {
     /**
-     * Class constructor.
+     * Class constructor
      */
     public function __construct()
     {

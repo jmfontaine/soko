@@ -12,9 +12,17 @@ namespace Soko\Vcs\Driver;
  */
 class Factory
 {
+    /**
+     * Instanciate and returns a VCS driver
+     * @param string $name        VCS driver name
+     * @param string $projectPath Path to the project
+     *
+     * @return \Soko\Vcs\Driver\DriverInterface Instance of the VCS driver
+     */
     public static function getDriver($name, $projectPath)
     {
-        $className = '\\Soko\\Vcs\\Driver\\' . ucfirst(strtolower($name));
+        // TODO: Check if driver is registered
+        $className = '\\Soko\\Vcs\\Driver\\' . ucfirst(strtolower($name)) . 'Driver';
         $driver    = new $className($projectPath);
 
         return $driver;
