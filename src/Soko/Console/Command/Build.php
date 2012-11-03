@@ -13,7 +13,7 @@ use Aviso\Notifier\GrowlNotifier;
 use Aviso\Event\Event;
 use Soko\Builder;
 use Soko\Vcs\Commit;
-use Soko\Vcs\Driver\Git as GitDriver;
+use Soko\Vcs\Driver\GitDriver;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputArgument;
