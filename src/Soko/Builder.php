@@ -38,8 +38,8 @@ class Builder
             \RecursiveIteratorIterator::CHILD_FIRST
         );
 
-        foreach($iterator as $item) {
-            if($item->isDir()) {
+        foreach ($iterator as $item) {
+            if ($item->isDir()) {
                 rmdir($item->getPathName());
             } else {
                 unlink($item->getPathName());

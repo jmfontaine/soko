@@ -33,19 +33,19 @@ class Build extends Command
              ->setDescription('Builds latest commit')
              ->setHelp(
                  sprintf(
-                    '%sBuilds latest commit%s',
-                 PHP_EOL,
-                 PHP_EOL
+                     '%sBuilds latest commit%s',
+                     PHP_EOL,
+                     PHP_EOL
                  )
              )->addOption(
-                'config',
-                'c',
-                InputOption::VALUE_OPTIONAL,
-                'Path to config file. If none provided the file is assumed to be soko.yml in the current directory'
+                 'config',
+                 'c',
+                 InputOption::VALUE_OPTIONAL,
+                 'Path to config file. If none provided the file is assumed to be soko.yml in the current directory'
              )->addArgument(
-                'hash',
-                InputArgument::REQUIRED,
-                'Hash of the commit to build'
+                 'hash',
+                 InputArgument::REQUIRED,
+                 'Hash of the commit to build'
              );
     }
 

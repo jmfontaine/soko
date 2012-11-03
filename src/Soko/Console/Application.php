@@ -36,12 +36,12 @@ class Application extends BaseApplication
         $definition = array(
             new InputArgument('command', InputArgument::REQUIRED, 'The command to execute'),
 
-            new InputOption('--help',    '-h', InputOption::VALUE_NONE, 'Display this help message.'),
-            new InputOption('--quiet',   '-q', InputOption::VALUE_NONE, 'Do not output any message.'),
+            new InputOption('--help', '-h', InputOption::VALUE_NONE, 'Display this help message.'),
+            new InputOption('--quiet', '-q', InputOption::VALUE_NONE, 'Do not output any message.'),
             new InputOption('--verbose', '-v', InputOption::VALUE_NONE, 'Increase verbosity of messages.'),
             new InputOption('--version', '-V', InputOption::VALUE_NONE, 'Display this application version.'),
-            new InputOption('--ansi',    '',   InputOption::VALUE_NONE, 'Force ANSI output.'),
-            new InputOption('--no-ansi', '',   InputOption::VALUE_NONE, 'Disable ANSI output.'),
+            new InputOption('--ansi', '', InputOption::VALUE_NONE, 'Force ANSI output.'),
+            new InputOption('--no-ansi', '', InputOption::VALUE_NONE, 'Disable ANSI output.'),
         );
 
         $this->getDefinition()
@@ -66,9 +66,9 @@ class Application extends BaseApplication
     protected function registerCommands()
     {
         $this->addCommands(
-    	    array(
-    	        new BuildCommand()
-	        )
-		);
+            array(
+                new BuildCommand(),
+            )
+        );
     }
 }
