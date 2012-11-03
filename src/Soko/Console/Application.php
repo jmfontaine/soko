@@ -24,13 +24,14 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class Application extends BaseApplication
 {
+    const VERSION = '0.1-dev';
+
     /**
      * Class constructor
      */
     public function __construct()
     {
-    	parent::__construct('Soko by Jean-Marc Fontaine', '0.1-dev');
-
+        parent::__construct('Soko by Jean-Marc Fontaine', self::VERSION);
 
         $definition = array(
             new InputArgument('command', InputArgument::REQUIRED, 'The command to execute'),

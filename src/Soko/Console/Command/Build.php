@@ -33,7 +33,7 @@ class Build extends Command
              ->setDescription('Builds latest commit')
              ->setHelp(
                  sprintf(
-					'%sBuilds latest commit%s',
+                    '%sBuilds latest commit%s',
                  PHP_EOL,
                  PHP_EOL
                  )
@@ -60,11 +60,11 @@ class Build extends Command
         if (null === $configPath) {
             $configPath = $this->getDefaultConfigPath();
         }
-
         try {
             $config = $this->loadConfig($configPath);
         } catch (Exception $exception) {
             $output->writeln($exception->getMessage());
+            exit(1);
         }
 
         // Let's assume configuration file is at the root of the project local repository
@@ -127,7 +127,7 @@ class Build extends Command
             $yamlParser = new YamlParser();
             $config = $yamlParser->parse($yaml);
         } catch (Exception $exception) {
-            throw new \RuntimeException("Invalid configuration file content ($configPath)", null, $exception);
+            throw new \RuntimeException("Invalid configuration file content ($configPath)", 0, $exception);
         }
 
         return $config;
